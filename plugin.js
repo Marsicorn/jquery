@@ -32,9 +32,9 @@
             });
         },
 
-        // revert: function() {
-        //     let originalList = this.data('originalList');
-        // },
+        revert: function() {
+            $(this).empty().append(this.data('originalList'));
+        },
 
         destroy: function() {
             return this.each(function() {
