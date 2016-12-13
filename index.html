@@ -2,9 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Badigina Irina">
     <title>jQuery Plugin</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <div class="content">
+        <!--<div class="list">-->
+            <!--<h1 class="taskListTitle">TODO:</h1>-->
+            <!--<ul class="taskList">-->
+                <!--<li class="task">1</li>-->
+                <!--<li class="task">2 some task here</li>-->
+                <!--<li class="task">3 some long task here blablabla tralalal ratatatatta sdjhfksdjhfksjhfskjdfh-->
+                <!--dfhsldjhflsdhflsdjfhlsjdhf</li>-->
+                <!--<li class="task">4 some task here</li>-->
+                <!--<li class="task">5 some task here blablabla tralalal ratatatatta </li>-->
+                <!--<li class="task">6 some task here</li>-->
+                <!--<li class="task">7 some task here</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+
+        <div class="list">
+            <h1 class="taskListTitle">jQuery task TODO:</h1>
+            <ul class="taskList">
+                <li class="task done">
+                    1. Разработать плагин для jQuery, который позволит, выполнив $(‘ul’).pluginName(),
+                    по клику на карточку перемещать ее в начало списка.
+                </li>
+                <li class="task done">
+                    2. При перемещении карточка должна не просто пропадать в одном месте и
+                    появляться в другом, а перелетать с места на место.
+                </li>
+                <li class="task done">
+                    3. Реализовать настройку direction — перемещает в начало или
+                    в конец списке
+                </li>
+                <li class="task done">
+                    4. Реализовать настройку index — смещение относительно того места,
+                    куда перемещается карточка</li>
+                <li class="task done">
+                    5. Реализовать настройку debug — в консоль выводится новая последовательность карточек
+                </li>
+                <li class="task">
+                    6. Перетаскивание карточек вручную (drag’n’drop)</li>
+                <li class="task done">
+                    7. Карточки нефиксированного размера, какие-то содержат больше текста, какие-то меньше.
+                </li>
+                <li class="task">
+                    8. Метод revert(), который будет возвращать все в первоначальное состояние.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <script src="plugin.js"></script>
+    <script>
+        $('.taskList').taskList({
+            debug: 'false',
+            direction: 'up',
+            index: 3
+        });
+    </script>
 </body>
 </html>
